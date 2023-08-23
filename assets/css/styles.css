@@ -17,8 +17,6 @@
   --small-font-size: .75rem;
 }
 .qrcode-container{
-  border: 3px solid #58576B;
-  align-items: center;
   padding:20px;
   margin:auto;
 }
@@ -27,9 +25,23 @@
   justify-content: center;
   align-items: center;
 }
+.qrcode>img{
+  border: 15px solid #f8f8f8;
+  border-radius: 20px;
+  align-items: center;
+}
 .content-item>span{
 font-size: 20px;
 font-weight: 600;
+
+}
+.content{
+
+  display: flex;
+  flex-direction:row;
+  align-items: center;  
+  justify-content: space-between;
+  flex-wrap: wrap;
 
 }
 
@@ -127,11 +139,6 @@ img{
 }
 
 
-.card__social{
-  position: absolute;
-  top: 50%;
-  transform: translate(25px, -64px);
-}
 
 
 
@@ -164,10 +171,45 @@ img{
 }
 
 /*========== MEDIA QUERIES ==========*/
+@media screen and (max-width: 568px){
+ 
+  .bd-container{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .content-item>span{
+    font-size: 15px;
+    font-weight: 600;
+    
+    }
+  .card__container{
+      height: 100vh;
+      /* grid-template-columns: repeat(3, 1fr); */
+      width: 95%;
+      margin: auto;
+      align-content: center;
+  }
+  .card{
+    padding: 0;
+  }
+  .card__circle1{
+    top: 20%;
+    left: -20%;
+  }
+  
+  .card__circle2{
+    bottom: -5%;
+    right: -25%;
+    background: linear-gradient(130deg,
+                rgb(196 53 255 / 80%),
+                rgb(255 255 255 / 92%));
+  }
+
+}
 @media screen and (min-width: 568px){
   .card__container{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
     height: 100vh;
     align-content: center;
   }
@@ -175,7 +217,21 @@ img{
     margin-left: auto;
     margin-right: auto;
   }
+  .card__circle1{
+    top: 20%;
+    left: -20%;
+  }
+  
+  .card__circle2{
+    bottom: -5%;
+    right: -25%;
+    background: linear-gradient(130deg,
+                rgb(196 53 255 / 80%),
+                rgb(255 255 255 / 92%));
+  }
+
 }
+
 
 @media screen and (min-width: 768px){
   .bd-container{
@@ -189,17 +245,19 @@ img{
 
   .card__container{
     height: 100vh;
-    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(3, 1fr); */
+    width: 40%;
+    margin: auto;
     align-content: center;
   }
 
   .card__circle1{
-    left: 10%;
+    left: 25%;
     top: 59%;
   }
 
   .card__circle2{
-    right: 8%;
+    right: 25%;
     bottom: 35%;
   }
 }
