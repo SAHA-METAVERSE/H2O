@@ -1,13 +1,24 @@
+// PRELOADING 
+
+window.onload = function () {
+  document.getElementById('Main').style.display = 'hidden';
+  window.setTimeout(fadeout, 500);
+  GetData();
+  document.getElementById('Main').style.display = 'show';
+}
+
+function fadeout() {
+  document.querySelector('.preloader').style.opacity = '0';
+  document.querySelector('.preloader').style.display = 'none';
+}
+
+function GetData(){
 
     // Get the query string part of the URL
     var queryString = window.location.search;
-
     let Api = "AKfycbzQP8d6qMy9O_b3QsOp74qwXKX1IqCqLHkMNx2X4TKIM6cP9zJjSpIT4l9kk14iDF-J";
- 
-
     let Total_Url_Number = queryString.substring(1);
-
-    console.log (queryString.substring(1).length);
+    // console.log (queryString.substring(1).length);
     if (Total_Url_Number.length ==13){
       var pair = Total_Url_Number.split("=");
       var key = decodeURIComponent(pair[0]);
@@ -22,9 +33,14 @@
     //   fetch('https://script.google.com/macros/s/AKfycbzQP8d6qMy9O_b3QsOp74qwXKX1IqCqLHkMNx2X4TKIM6cP9zJjSpIT4l9kk14iDF-J/exec?O=1615175660').then(res => res.json()).then(data => { console.log(data)});
 
       // console.log(JSON.stringify(Data2));
+    }else{
+      window.setTimeout(fadeout, 8000);
+      document.getElementById('Main').innerHTML="NO DATA FOUND";
+      
+      
     }
 
-
+  }
     async function getText(Url) {
  
         let x = await fetch(Url).then(res => res.json()).then(data => {
@@ -61,8 +77,8 @@
         qrcodeContainer2.innerHTML = "";
         new QRCode(qrcodeContainer2, {
         text: website,
-        width: 200,
-        height: 200,
+        width: 180,
+        height: 180,
         colorDark: "#020203",
         colorLight: "#ffffff",
         correctLevel: QRCode.CorrectLevel.H
