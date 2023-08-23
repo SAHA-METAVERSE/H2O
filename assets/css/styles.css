@@ -51,6 +51,11 @@ font-weight: 600;
     --h3-font-size: 1.25rem;
     --small-font-size: .813rem;
   }
+.qrcode>img{
+  border: 15px solid #f8f8f8;
+  border-radius: 20px;
+  align-items: center;
+}
 }
 
 
@@ -139,10 +144,6 @@ img{
 }
 
 
-
-
-
-
 .card__glass:hover .card__link{
   transform: translateX(-1.5rem);
 }
@@ -204,6 +205,11 @@ img{
                 rgb(196 53 255 / 80%),
                 rgb(255 255 255 / 92%));
   }
+.qrcode>img{
+  border: 15px solid #f8f8f8;
+  border-radius: 20px;
+  align-items: center;
+}
 
 }
 @media screen and (min-width: 568px){
@@ -229,6 +235,11 @@ img{
                 rgb(196 53 255 / 80%),
                 rgb(255 255 255 / 92%));
   }
+	.qrcode>img{
+  border: 15px solid #f8f8f8;
+  border-radius: 20px;
+  align-items: center;
+}
 
 }
 
@@ -260,6 +271,11 @@ img{
     right: 25%;
     bottom: 35%;
   }
+	.qrcode>img{
+  border: 15px solid #f8f8f8;
+  border-radius: 20px;
+  align-items: center;
+}
 }
 
 
