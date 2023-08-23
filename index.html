@@ -6,14 +6,29 @@
         <!--========== CSS ==========-->
         <link rel="stylesheet" href="assets/css/styles.css">
              <title>Object2Objections</title>
+             <link rel="stylesheet" href="assets/css/preloader.css">
+
     </head>
     <body>
+
+
+<div class="preloader">
+<div class="preloader-inner">
+<div class="preloader-icon">
+<span></span>
+<span></span>
+</div>
+</div>
+</div>
+
+
+
         <section class="card">
             <div class="card__circle card__circle1"></div>
             <div class="card__circle card__circle2"></div>
 
-            <div class="card__container bd-container">
-                <div class="card__glass">
+            <div  class="card__container bd-container">
+                <div id="Main" class="card__glass">
                     <img id="Image"  alt="" class="card__img">
     
                     <div class="card__data">
@@ -44,10 +59,13 @@
                         <div id="qrcode-container">
                             <div id="qrcode" class="qrcode"></div>
                             <h4>Scan This QR code For Sign-in Another Devices</h4>
-                            <div id="qrcode-2" class="qrcode"></div>
+                            <div id="qrcode-2" class="qrcode">
+                                <h5>Scan Me!</h5>
+                            </div>
                           </div>
                 
                 </div>
+
 
             </div>
         </section>
