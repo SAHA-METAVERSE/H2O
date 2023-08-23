@@ -50,7 +50,7 @@
     // let Numbers = Num.substring(1);
     // alert(Numbers);
 
-    let website = "https://saha-metaverse.github.io/O2O/?O="+Num;
+    let website = "https://saha-metaverse.github.io/H2O/?O="+Num;
 
     if (website) {
         // let qrcodeContainer = document.getElementById("qrcode");
